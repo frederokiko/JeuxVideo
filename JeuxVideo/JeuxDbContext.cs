@@ -12,6 +12,14 @@ namespace ApiEF
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Jeu>()
+         .Property(j => j.Id)
+         .ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<Genre>()
+                .Property(g => g.Id)
+                .ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<Jeu>()
                 .HasOne(j => j.Genre)
                 .WithMany()
                 .HasForeignKey(j => j.GenreId)

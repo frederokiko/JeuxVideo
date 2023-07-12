@@ -9,6 +9,7 @@ namespace ApiEF.Models
 {
     public class Jeu
     {
+        [Key]
         public int Id { get; set; }
         public string Titre { get; set; }
         public int Annee { get; set; }
