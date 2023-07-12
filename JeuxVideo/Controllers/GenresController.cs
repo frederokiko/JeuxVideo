@@ -12,7 +12,7 @@ namespace JeuxVideo.Controllers
 
         public GenresController(JeuxDbContext dbContext)
         {
-            _dbContext = dbContext;
+            _dbContext =  dbContext;
         }
 
        
